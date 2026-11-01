@@ -387,9 +387,30 @@ function mapFallback() {
     src="https://maps.google.com/maps?q=${CONFIG.lat},${CONFIG.lng}&z=${CONFIG.zoom}&output=embed"></iframe>`;
 }
 
+// Leaflet (map library) is only downloaded when the map section comes near — keeps the first load light
+const LEAFLET = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min";
+let leafletPromise = null, mapLoading = false;
+function loadLeaflet() {
+  if (window.L) return Promise.resolve();
+  if (!leafletPromise) leafletPromise = new Promise((res, rej) => {
+    const css = document.createElement("link");
+    css.rel = "stylesheet"; css.href = LEAFLET + ".css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = LEAFLET + ".js"; js.onload = res; js.onerror = rej;
+    document.head.appendChild(js);
+    setTimeout(() => rej(new Error("timeout")), 12000);
+  });
+  return leafletPromise;
+}
+
 function initMap() {
-  if (map || $("#map").dataset.fallback) return;
-  if (typeof L === "undefined") { mapFallback(); return; }
+  if (map || mapLoading || $("#map").dataset.fallback) return;
+  if (typeof L === "undefined") {
+    mapLoading = true;
+    loadLeaflet().then(() => { mapLoading = false; initMap(); }, () => { mapLoading = false; mapFallback(); });
+    return;
+  }
   map = L.map("map", { scrollWheelZoom: false }).setView(hotel, CONFIG.zoom);
   const servers = [
     ["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", "&copy; OpenStreetMap"],
@@ -633,7 +654,7 @@ $$(".nav__links a").forEach(a => a.addEventListener("click", () => nav.classList
 new IntersectionObserver((en, obs) => {
   if (en[0].isIntersecting) { initMap(); obs.disconnect(); }
 }, { rootMargin: "300px" }).observe($("#map"));
-addEventListener("load", () => setTimeout(initMap, 5000)); // in case the observer never fires
+addEventListener("load", () => setTimeout(initMap, 8000)); // in case the observer never fires
 
 /* ================= Boot ================= */
 document.body.classList.add("is-loading");
@@ -652,7 +673,9 @@ function boot() {
   $$(".split").forEach(el => el.classList.add("play"));
   movePill();
 }
-// Let the logo animation play (~2.4s), but never wait more than 4s for slow images
-const MIN_INTRO = reduceMotion ? 0 : 2500, t0 = performance.now();
-addEventListener("load", () => setTimeout(boot, Math.max(0, MIN_INTRO - (performance.now() - t0))));
-setTimeout(boot, 4000);
+// The logo animation plays once per visit; later page views in the same visit open instantly.
+// The page never waits for all images to finish loading.
+let introSeen = false;
+try { introSeen = sessionStorage.getItem("introSeen") === "1"; sessionStorage.setItem("introSeen", "1"); } catch (e) {}
+if (reduceMotion || introSeen) { $("#preloader").classList.add("skip"); boot(); }
+else setTimeout(boot, 2300);

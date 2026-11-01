@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>شنقيطي مودرن | Chinguetti Modern Hotel</title>
+  <link rel="preload" as="image" href="img/facade-hd.webp" fetchpriority="high">
   <meta name="description" content="فندق شنقيطي مودرن — غرف مريحة، باحات واستراحات بديكور موريتاني أصيل. الحجز عبر واتساب.">
   <meta name="theme-color" content="#F6F2EC">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -13,8 +14,8 @@
   <meta property="og:title" content="شنقيطي مودرن | Chinguetti Modern Hotel">
   <meta property="og:description" content="غرف مريحة، باحات واستراحات بديكور موريتاني أصيل. الحجز عبر واتساب.">
   <meta property="og:image" content="https://chinguetti-modern.netlify.app/img/og-image.jpg">
-  <link rel="preload" href="fonts/thmanyahsans-Regular.otf" as="font" type="font/otf" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="preload" href="fonts/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- SEO (added by publish_site.py) -->
@@ -34,7 +35,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://chinguetti-modern.netlify.app/img/og-image.jpg">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Hotel", "name": "Chinguetti Modern Hotel", "alternateName": ["شنقيطي مودرن", "شنقيط مودرن", "Chinguetti Modern", "Hôtel Chinguetti Modern"], "description": "فندق في شنقيط بموريتانيا: غرف مكيّفة، باحات واستراحات بديكور موريتاني أصيل، والحجز عبر واتساب.", "url": "https://chinguetti-modern.netlify.app/", "logo": "https://chinguetti-modern.netlify.app/android-chrome-512x512.png", "image": ["https://chinguetti-modern.netlify.app/img/facade-hd.jpg", "https://chinguetti-modern.netlify.app/img/room-twin-6.jpg", "https://chinguetti-modern.netlify.app/img/room-twin-4.jpg", "https://chinguetti-modern.netlify.app/img/room-family.jpg", "https://chinguetti-modern.netlify.app/img/room-single.jpg"], "telephone": "+22246725813", "address": {"@type": "PostalAddress", "addressLocality": "Chinguetti", "addressRegion": "Adrar", "addressCountry": "MR"}, "geo": {"@type": "GeoCoordinates", "latitude": 20.466752, "longitude": -12.370448}, "hasMap": "https://goo.gl/maps/Cersj4uXVSHkuGHg8", "availableLanguage": ["ar", "fr", "en", "es", "it"], "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Courtyard and garden", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Large hall", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Traditional Mauritanian decor", "value": true}], "email": "chinguettimodern@gmail.com", "sameAs": ["https://www.facebook.com/chinguettimodern", "https://www.tiktok.com/@chinguettimodern"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Hotel", "name": "Chinguetti Modern Hotel", "alternateName": ["شنقيطي مودرن", "شنقيط مودرن", "Chinguetti Modern", "Hôtel Chinguetti Modern"], "description": "فندق في شنقيط بموريتانيا: غرف مكيّفة، باحات واستراحات بديكور موريتاني أصيل، والحجز عبر واتساب.", "url": "https://chinguetti-modern.netlify.app/", "logo": "https://chinguetti-modern.netlify.app/android-chrome-512x512.png", "image": ["https://chinguetti-modern.netlify.app/img/facade-hd.webp", "https://chinguetti-modern.netlify.app/img/room-twin-6.webp", "https://chinguetti-modern.netlify.app/img/room-twin-4.webp", "https://chinguetti-modern.netlify.app/img/room-family.webp", "https://chinguetti-modern.netlify.app/img/room-single.webp"], "telephone": "+22246725813", "address": {"@type": "PostalAddress", "addressLocality": "Chinguetti", "addressRegion": "Adrar", "addressCountry": "MR"}, "geo": {"@type": "GeoCoordinates", "latitude": 20.466752, "longitude": -12.370448}, "hasMap": "https://goo.gl/maps/Cersj4uXVSHkuGHg8", "availableLanguage": ["ar", "fr", "en", "es", "it"], "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Courtyard and garden", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Large hall", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Traditional Mauritanian decor", "value": true}], "email": "chinguettimodern@gmail.com", "sameAs": ["https://www.facebook.com/chinguettimodern", "https://www.tiktok.com/@chinguettimodern"]}</script>
 </head>
 <body>
 
@@ -111,7 +112,7 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <div class="hero__media" id="heroMedia">
-        <img data-img="hero" alt="" data-fallback>
+        <img src="img/facade-hd.webp" data-img="hero" alt="" fetchpriority="high" decoding="async" data-fallback>
       </div>
       <div class="hero__veil"></div>
       <div class="container hero__content">
@@ -202,19 +203,19 @@
         </div>
         <div class="wood__cards">
           <article class="acard reveal tilt">
-            <div class="acard__img"><img data-img="amen1" alt="" loading="lazy" data-fallback></div>
+            <div class="acard__img"><img src="img/hall-1.webp" data-img="amen1" alt="" loading="lazy" data-fallback></div>
             <h3 data-i18n="amen.1.t">Hall</h3>
             <p data-i18n="amen.1.d">…</p>
             <a href="#" class="btn btn--accent btn--sm js-wa" data-wa="hall" data-i18n="amen.ask">Ask us</a>
           </article>
           <article class="acard reveal tilt" style="--d:.1s">
-            <div class="acard__img"><img data-img="amen2" alt="" loading="lazy" data-fallback></div>
+            <div class="acard__img"><img src="img/courtyard-garden.webp" data-img="amen2" alt="" loading="lazy" data-fallback></div>
             <h3 data-i18n="amen.2.t">Courtyard</h3>
             <p data-i18n="amen.2.d">…</p>
             <a href="#" class="btn btn--accent btn--sm js-wa" data-wa="courtyard" data-i18n="amen.ask">Ask us</a>
           </article>
           <article class="acard reveal tilt" style="--d:.2s">
-            <div class="acard__img"><img data-img="amen3" alt="" loading="lazy" data-fallback></div>
+            <div class="acard__img"><img src="img/lobby.webp" data-img="amen3" alt="" loading="lazy" data-fallback></div>
             <h3 data-i18n="amen.3.t">Lounge</h3>
             <p data-i18n="amen.3.d">…</p>
             <a href="#" class="btn btn--accent btn--sm js-wa" data-wa="lounge" data-i18n="amen.ask">Ask us</a>
@@ -367,7 +368,7 @@
                 <span data-i18n="loc.share">Share</span>
               </button>
             </div>
-            <div class="loc__photo"><img data-img="locPhoto" alt="" loading="lazy" data-fallback></div>
+            <div class="loc__photo"><img src="img/entrance.webp" data-img="locPhoto" alt="" loading="lazy" data-fallback></div>
           </aside>
         </div>
       </div>
@@ -446,11 +447,11 @@
   "defaultLang": "ar"
  },
  "images": {
-  "hero": "img/facade-hd.jpg",
-  "amen1": "img/hall-1.jpg",
-  "amen2": "img/courtyard-garden.jpg",
-  "amen3": "img/lobby.jpg",
-  "locPhoto": "img/entrance.jpg"
+  "hero": "img/facade-hd.webp",
+  "amen1": "img/hall-1.webp",
+  "amen2": "img/courtyard-garden.webp",
+  "amen3": "img/lobby.webp",
+  "locPhoto": "img/entrance.webp"
  },
  "texts": {
   "ar": {},
@@ -462,7 +463,7 @@
  "rooms": [
   {
    "id": "twin",
-   "img": "img/room-twin-6.jpg",
+   "img": "img/room-twin-6.webp",
    "name": {
     "ar": "غرفة ثنائية",
     "fr": "Chambre twin",
@@ -507,7 +508,7 @@
   },
   {
    "id": "classic",
-   "img": "img/room-twin-4.jpg",
+   "img": "img/room-twin-4.webp",
    "name": {
     "ar": "غرفة ثنائية كلاسيكية",
     "fr": "Chambre classique",
@@ -552,7 +553,7 @@
   },
   {
    "id": "family",
-   "img": "img/room-family.jpg",
+   "img": "img/room-family.webp",
    "name": {
     "ar": "غرفة عائلية",
     "fr": "Chambre familiale",
@@ -597,7 +598,7 @@
   },
   {
    "id": "single",
-   "img": "img/room-single.jpg",
+   "img": "img/room-single.webp",
    "name": {
     "ar": "غرفة فردية",
     "fr": "Chambre simple",
@@ -644,101 +645,100 @@
  "gallery": [
   {
    "cat": "patio",
-   "img": "img/facade-hd.jpg"
+   "img": "img/facade-hd.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/lobby.jpg"
+   "img": "img/lobby.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-family.jpg"
+   "img": "img/room-family.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-6.jpg"
+   "img": "img/room-twin-6.webp"
   },
   {
    "cat": "patio",
-   "img": "img/courtyard-front.jpg"
+   "img": "img/courtyard-front.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-1.jpg"
+   "img": "img/room-twin-1.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/decor-tapestry.jpg"
+   "img": "img/decor-tapestry.webp"
   },
   {
    "cat": "hall",
-   "img": "img/hall-1.jpg"
+   "img": "img/hall-1.webp"
   },
   {
    "cat": "patio",
-   "img": "img/courtyard-garden.jpg"
+   "img": "img/courtyard-garden.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/lounge.jpg"
+   "img": "img/lounge.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-3.jpg"
+   "img": "img/room-twin-3.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/corridor.jpg"
+   "img": "img/corridor.webp"
   },
   {
    "cat": "hall",
-   "img": "img/hall-2.jpg"
+   "img": "img/hall-2.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/decor-mat.jpg"
+   "img": "img/decor-mat.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-5.jpg"
+   "img": "img/room-twin-5.webp"
   },
   {
    "cat": "patio",
-   "img": "img/garden.jpg"
+   "img": "img/garden.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/lounge-decor.jpg"
+   "img": "img/lounge-decor.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-2.jpg"
+   "img": "img/room-twin-2.webp"
   },
   {
    "cat": "patio",
-   "img": "img/entrance.jpg"
+   "img": "img/entrance.webp"
   },
   {
    "cat": "lounge",
-   "img": "img/decor-mortar.jpg"
+   "img": "img/decor-mortar.webp"
   },
   {
    "cat": "hall",
-   "img": "img/hall-3.jpg"
+   "img": "img/hall-3.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-twin-4.jpg"
+   "img": "img/room-twin-4.webp"
   },
   {
    "cat": "room",
-   "img": "img/room-single.jpg"
+   "img": "img/room-single.webp"
   }
  ]
 }
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>

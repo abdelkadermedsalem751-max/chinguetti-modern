@@ -1,9 +1,8 @@
 /* ============ Font: Thmanyah Sans (خط ثمانية) — self-hosted ============ */
-@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Light.otf") format("opentype"); font-weight: 300; font-display: swap; }
-@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Medium.otf") format("opentype"); font-weight: 500 600; font-display: swap; }
-@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Bold.otf") format("opentype"); font-weight: 700 800; font-display: swap; }
-@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Black.otf") format("opentype"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Medium.woff2") format("woff2"); font-weight: 500 600; font-display: swap; }
+@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Bold.woff2") format("woff2"); font-weight: 700 800; font-display: swap; }
+@font-face { font-family: "Thmanyah Sans"; src: url("../fonts/thmanyahsans-Black.woff2") format("woff2"); font-weight: 900; font-display: swap; }
 
 /* ============ Tokens (palette taken from the reference design) ============ */
 :root {
@@ -109,6 +108,7 @@ html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: .95rem; }
   transition: opacity .7s var(--ease), visibility .7s;
 }
 .preloader.done { opacity: 0; visibility: hidden; }
+.preloader.skip { display: none; }
 .preloader.done .pl-logo { transform: scale(.85) translateY(-20px); }
 .pl-logo { width: 132px; height: auto; overflow: visible; transition: transform .7s var(--ease); }
 .pl-arch { stroke-dasharray: 1; stroke-dashoffset: 1; animation: plDraw 1.1s var(--ease) forwards; }
