@@ -46,7 +46,7 @@ window.I18N = {
   },
 
   fr: {
-    "brand": "شنقيطي مودرن", "brand.tag": "Hôtel",
+    "brand": "Chinguetti Modern", "brand.tag": "Hôtel",
     "nav.home": "Accueil", "nav.rooms": "Chambres", "nav.gallery": "Galerie", "nav.amenities": "Espaces",
     "nav.location": "Accès", "nav.contact": "Contact", "nav.book": "Réserver",
     "hero.eyebrow": "Un hôtel moderne à l'âme de Chinguetti",
@@ -91,7 +91,7 @@ window.I18N = {
   },
 
   en: {
-    "brand": "شنقيطي مودرن", "brand.tag": "Hotel",
+    "brand": "Chinguetti Modern", "brand.tag": "Hotel",
     "nav.home": "Home", "nav.rooms": "Rooms", "nav.gallery": "Gallery", "nav.amenities": "Spaces",
     "nav.location": "Location", "nav.contact": "Contact", "nav.book": "Book now",
     "hero.eyebrow": "A modern hotel with the soul of Chinguetti",
@@ -136,7 +136,7 @@ window.I18N = {
   },
 
   es: {
-    "brand": "شنقيطي مودرن", "brand.tag": "Hotel",
+    "brand": "Chinguetti Modern", "brand.tag": "Hotel",
     "nav.home": "Inicio", "nav.rooms": "Habitaciones", "nav.gallery": "Galería", "nav.amenities": "Espacios",
     "nav.location": "Ubicación", "nav.contact": "Contacto", "nav.book": "Reservar",
     "hero.eyebrow": "Un hotel moderno con el alma de Chinguetti",
@@ -181,7 +181,7 @@ window.I18N = {
   },
 
   it: {
-    "brand": "شنقيطي مودرن", "brand.tag": "Hotel",
+    "brand": "Chinguetti Modern", "brand.tag": "Hotel",
     "nav.home": "Home", "nav.rooms": "Camere", "nav.gallery": "Galleria", "nav.amenities": "Spazi",
     "nav.location": "Posizione", "nav.contact": "Contatti", "nav.book": "Prenota",
     "hero.eyebrow": "Un hotel moderno con l'anima di Chinguetti",
