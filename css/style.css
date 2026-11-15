@@ -428,6 +428,8 @@ html[lang="ar"] .hero__title { line-height: 1.35; }
 .footer a:not(.brand):not(.social__btn) { display: block; padding: 3px 0; transition: color .3s; }
 .footer a:hover { color: var(--accent); }
 .footer p { font-size: .9rem; margin-top: 14px; max-width: 320px; }
+.footer__seo { margin-top: 36px; display: grid; gap: 6px; }
+.footer__seo p { font-size: .78rem; line-height: 1.6; color: rgba(255,255,255,.55); margin: 0; max-width: none; }
 .footer__bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 48px; padding-block: 20px; font-size: .82rem; }
 
 /* ============ Floating WhatsApp ============ */
@@ -723,3 +725,6 @@ html[dir="rtl"] .ff label { --origin: right; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .reveal, .split .w > span { opacity: 1; transform: none; }
 }
+
+#bookingBtn[hidden] { display: none; }
+#bookingBtn { margin-top: 12px; }

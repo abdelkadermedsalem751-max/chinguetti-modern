@@ -336,6 +336,9 @@ $("#waPreviewPhone").textContent = CONFIG.phone;
   $(id).href = "tel:" + CONFIG.phone.replace(/\s/g, "");
 });
 
+// Optional Booking.com button: shown only when a link is set in the admin panel
+if (CONFIG.bookingLink) { const bb = $("#bookingBtn"); bb.href = CONFIG.bookingLink; bb.hidden = false; }
+
 // Social icons (footer + booking section)
 const SOCIAL_ICONS = {
   whatsapp: '<svg viewBox="0 0 32 32"><use href="#wa"/></svg>',
