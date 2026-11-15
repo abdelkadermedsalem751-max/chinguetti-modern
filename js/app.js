@@ -337,7 +337,7 @@ $("#waPreviewPhone").textContent = CONFIG.phone;
 });
 
 // Optional Booking.com button: shown only when a link is set in the admin panel
-if (CONFIG.bookingLink) { const bb = $("#bookingBtn"); bb.href = CONFIG.bookingLink; bb.hidden = false; }
+if (CONFIG.bookingLink) { for (const id of ["#bookingBtn", "#footBooking"]) { const bb = $(id); if (bb) { bb.href = CONFIG.bookingLink; bb.hidden = false; } } }
 
 // Social icons (footer + booking section)
 const SOCIAL_ICONS = {
